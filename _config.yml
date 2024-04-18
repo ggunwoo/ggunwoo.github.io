@@ -14,7 +14,7 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Gunwoo Blog # the main title
+title: Gunwoo.blog # the main title
 
 tagline: 기록하는 습관을 만들자 # it will display as the sub-title
 
@@ -39,7 +39,7 @@ social:
   links:
     # The first element serves as the copyright owner's link
     # https://twitter.com/username # change to your twitter homepage
-    - https://github.com/username
+    - https://github.com/ggunwoo
     - https://gunw.notion.site/2d7b43752d4140dc953fb5c5b5b36eec?pvs=4
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
