@@ -2,7 +2,7 @@
 title: 기술 블로그 시작
 date: 2024-04-18 11:24:00 +0900
 categories: [Blog, etc]
-tags: [blog] # TAG는 반드시 소문자로 이루어져야함!
+tags: [blog]
 ---
 
 ## 기술 블로그를 시작하게된 계기
