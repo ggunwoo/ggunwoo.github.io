@@ -59,6 +59,10 @@
           {%- capture url -%}
             https://{{ entry.type }}.com/{{ site[entry.type].username }}
           {%- endcapture -%}
+        {% when 'notion' %}
+          {%- capture url -%}
+            https://gunw.notion.site/{{ site[entry.type].username }}
+          {%- endcapture -%}
         {% when 'email' %}
           {% assign email = site.social.email | split: '@' %}
           {%- capture url -%}
@@ -89,7 +93,12 @@
             rel="{{ link_types }}"
           {% endunless %}
         >
-          <i class="{{ entry.icon }}"></i>
+          {% if entry.type != 'notion' %}
+            <i class="{{ entry.icon }}"></i>
+          {% endif %}
+          {% if entry.type == 'notion' %}
+            <i><img class="custom-icon notion" src="../assets/img/notion-16.png" /></i>
+          {% endif %}
         </a>
       {% endif %}
     {% endfor %}

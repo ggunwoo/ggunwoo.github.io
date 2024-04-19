@@ -1,3 +1,12 @@
+.custom-icon {
+  // notion icon
+  opacity: 0.4;
+  @extend %clickable-transition; // transition
+}
+.notion {
+  margin: -3.3px 0 0;
+}
+
 /* The common styles */
 
 html {
@@ -16,6 +25,9 @@ html {
     &:not([data-mode]),
     &[data-mode='dark'] {
       @include dark-scheme;
+      .custom-icon {
+        filter: invert(100%);
+      }
     }
 
     &[data-mode='light'] {
@@ -862,6 +874,9 @@ $btn-mb: 0.5rem;
 
       &:not(:last-child) {
         margin-right: $sb-btn-gap;
+      }
+      &:hover .custom-icon {
+        opacity: 1;
       }
     }
 
