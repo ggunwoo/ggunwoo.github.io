@@ -11,7 +11,7 @@ tags: [blog, setting]
 
 ## 서론
 
-> &nbsp;해당 글은 재가 [Jekyll Theme](https://github.com/topics/jekyll-theme)중에서 [Chirpy 테마](https://github.com/cotes2020/jekyll-theme-chirpy)를 사용하여 Github Pages블로그를 개설하는 과정을 설명하고있습니다. 다른분들의 과정과 다를 수 있습니다. 다른 테마를 사용하시는 경우에도 과정이 다를수있습니다.
+> &nbsp;해당 글은 재가 [Jekyll Theme](https://github.com/topics/jekyll-theme)중에서 [Chirpy 테마](https://github.com/cotes2020/jekyll-theme-chirpy)를 사용하여 Github Pages블로그를 개설하는 과정을 설명하고있습니다. 다른분들의 과정이 다를 수 있습니다. 다른 테마를 사용하시는 경우에도 과정이 다를수있습니다.
 >
 > [Chirpy 공식문서 시작 가이드](https://chirpy.cotes.page/posts/getting-started/)
 >
