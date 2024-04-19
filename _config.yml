@@ -19,7 +19,9 @@ title: Gunwoo.blog # the main title
 tagline: 기록하는 습관을 만들자 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  develop, developer, front, frontend, github, blog, pages, jekyll, jekyll theme, chirpy, javascript, typescript, react, next.js, 개발, 개발자, 프론트, 프론트엔드, 깃허브, 블로그, 페이지, 지킬, 지킬 테마, 자바스크립트, 타입스크립트, 리액트
+  개발자로서 성장과정을 기록해 보려 합니다.
+
+# develop, developer, front, frontend, github, blog, pages, jekyll, jekyll theme, chirpy, javascript, typescript, react, next.js, 개발, 개발자, 프론트, 프론트엔드, 깃허브, 블로그, 페이지, 지킬, 지킬 테마, 자바스크립트, 타입스크립트, 리액트
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
