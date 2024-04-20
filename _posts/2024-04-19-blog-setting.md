@@ -11,15 +11,15 @@ tags: [blog, setting]
 
 ## 서론
 
-> &nbsp;해당 글은 재가 [Jekyll Theme](https://github.com/topics/jekyll-theme)중에서 [Chirpy 테마](https://github.com/cotes2020/jekyll-theme-chirpy)를 사용하여 Github Pages블로그를 개설하는 과정을 설명하고있습니다. 다른분들의 과정이 다를 수 있습니다. 다른 테마를 사용하시는 경우에도 과정이 다를수있습니다.
+> &nbsp;해당 글은 재가 [Jekyll Theme](https://github.com/topics/jekyll-theme) 중에서 [Chirpy 테마](https://github.com/cotes2020/jekyll-theme-chirpy)를 사용하여 Github Pages 블로그를 개설하는 과정을 설명하고 있습니다. 다른 분들의 과정이 다를 수 있습니다. 다른 테마를 사용하시는 경우에도 과정이 다를 수 있습니다.
 >
 > [Chirpy 공식문서 시작 가이드](https://chirpy.cotes.page/posts/getting-started/)
 >
 > Windows, wsl2, Ubuntu를 사용했습니다.  
-> 다른 운영체제에 경우 과정을 직접 경험하지 못했습니다.
+> macOS 경우 과정을 직접 경험하지 못했습니다.
 >
 > wsl2와 Ubuntu를 설치하려면?  
-> [(WSL) Windows 에서 Ubuntu bash 사용하는 방법 - Ju-ing님의 블로그](https://blog.ju-ing.com/posts/WSL-ubuntu-bash-install/)
+> [(WSL) Windows에서 Ubuntu bash 사용하는 방법 - Ju-ing님의 블로그](https://blog.ju-ing.com/posts/WSL-ubuntu-bash-install/)
 
 <!-- > [[Windows] WSL2로 리눅스 설치 및 기본 사용법 - LainyZine님의 블로그](https://www.lainyzine.com/ko/article/how-to-install-wsl2-and-use-linux-on-windows-10/) -->
 
@@ -33,7 +33,9 @@ Chirpy의 시작옵션은 3가지가있습니다.
 1. [소스코드(.zip)](https://github.com/cotes2020/jekyll-theme-chirpy/releases)를 직접 다운받아 설치
 1. [Chirpy Github](https://github.com/cotes2020/jekyll-theme-chirpy) 저장소를 [fork](https://github.com/cotes2020/jekyll-theme-chirpy/fork)받아서 설치
 
-저는 초기설정 작업이 필요로 하지만 UI 커스터마이징에 이점이있는 3번 fork 방식으로 설치했습니다.
+초기설정 작업이 복잡하지만 UI 커스터마이징에 이점이 있어서 3번, Fork 방식으로 설치를 진행했습니다.
+
+<!-- 저는 초기설정 작업이 필요로 하지만 UI 커스터마이징에 이점이있는 3번 fork 방식으로 설치했습니다. -->
 
 <br />
 
@@ -41,8 +43,7 @@ Chirpy의 시작옵션은 3가지가있습니다.
 
 <img width="80%" src="/assets/img/posts-img/240419/fork_01.png" alt="fork" />
 
-Chirpy저장소에서 fork를 클릭한 뒤 <span style="color:yellowgreen">Create fork</span>를 클릭하시면  
-내 저장소로 jekyll-theme-chirpy를 포크로 찍어옵니다.
+Chirpy저장소에서 fork한 후 <span style="color:yellowgreen">Create fork</span>를 클릭하시면 내 저장소에 jekyll-theme-chirpy가 복제되어 자동으로 생성됩니다..
 
 <br />
 
@@ -50,19 +51,19 @@ Chirpy저장소에서 fork를 클릭한 뒤 <span style="color:yellowgreen">Crea
 
 <img width="90%" src="/assets/img/posts-img/240419/change_name_01.png" alt="changeName" />
 
-저장소 - Settings - General - Repository name을 username.github.io로 작성하신 후 Rename을 눌러 바꿔주시면됩니다.
+fork한 내 원격저장소에서 Settings 탭 -> General -> Repository name을 [GtiHub ID].github.io로 작성하신 후 Rename을 눌러 바꿔주시면됩니다.
 
 > jekyll-theme-chirpy -> [GitHub ID].github.io
 
 <br />
 
-### 3. 저장소 로컬로 가져오기(clone)
+### 3. 원격저장소에서 로컬로 가져오기
 
 ```shell
-git clone https://github.com/gunw0-0/gunw0-0.github.io.git
+git clone https://github.com/[GitHub_ID]/[GitHub_ID].github.io.git
 ```
 
-로컬에서 Shell을 열어 원하시는 위치로 이동한 뒤 Fork한 저장소를 Clone 합니다.
+로컬환경에서 Shell을 열어 설치를 원하시는 위치로 이동한 뒤 Fork한 저장소를 Clone해서 로컬폴더를 만들어줍니다.
 
 <br />
 
@@ -72,24 +73,25 @@ git clone https://github.com/gunw0-0/gunw0-0.github.io.git
 bash tools/init # 또는 bash tools/init.sh
 ```
 
-저는 여기서 많이 해맸는데요. Chirpy 사용하기 위해선 `tools/init` 명령을 꼭 수행 진행해야합니다.  
-로컬로 Clone한 폴더에 tools - init 파일을 bash로 실행시키는 명령어이며, Unix 계열 운영체제에서 사용이 가능하다고 합니다.  
+저는 여기서 많이 헤맸는데요.  
+Chirpy 사용하기 위해선 `tools/init`초기화 작업을 꼭 진행해야합니다.  
+로컬폴더에 /tools/init 파일을 bash로 실행시키는 명령어이며, Unix계열 운영체제에서 사용이 가능하다고 합니다.  
 macOS나 Linux에선 바로 실행이 가능하지만 Windows에서 사용하기위해 Linux환경을 구축해야하며 WSL(Windows Subsystem for Linux)가 필요합니다.
 
 > _WSL2 설치하려면?_  
 > [(WSL) Windows 에서 Ubuntu bash 사용하는 방법 - Ju-ing님의 블로그](https://blog.ju-ing.com/posts/WSL-ubuntu-bash-install/){:target="\_blank"}
 
-macOS 혹은 Linux를 사용하신다면 초기화해주시고 다음으로 넘어가시면 되겠습니다.
+macOS를 사용하신다면 초기화해주시고 다음으로 넘어가시면 되겠습니다.
 
 <br />
 
-#### 4-1. (Windows) Linux 환경에서 최신 버전의 node.js를 설치
+#### 4-1. (windows) Linux 환경에서 최신 버전의 node.js를 설치
 
-wsl2와 Ubuntu 설치하셨다면 Linux환경에서 최신 버전의 node.js를 설치해야합니다.
+wsl2와 Ubuntu 설치하셨다면 Linux환경에 최신 버전의 node.js를 설치해야합니다.
 
-바로 Ubuntu에서 `sudo apt install node` 명령으로 node를 설치하시면 Ubuntu에 포함된 node.js는 v12.22.9 버전이기에 `tools/init` 명령어가 정상적으로 실행되지 않습니다.
+바로 Ubuntu에서 `sudo apt install node` 명령으로 node를 설치하시면 `tools/init` 명령어가 정상적으로 실행되지 않습니다. 왜냐하면 Ubuntu에 포함된 node.js는 v12.22.9 버전이기 때문입니다. 그렇기에 node.js를 최신버전 설치는 필수로 진행해야합니다.
 
-2024년 04월 19일 기준으로 node.js의 최신버전은 21.7.1버전이고 LTS버전은 20.12.0 입니다. 최신 버전은 불안정하고 일부 모듈이 작동하지 않을 수 있으니 20.x 버전을 curl로 다운받는 방법을 설명하겠습니다.
+24년 4월 19일 기준으로 node.js의 최신버전은 21.7.1버전이고 LTS버전은 20.12.0 입니다. 최신 버전은 불안정하고 일부 모듈이 작동하지 않을 수 있으니 20.x 버전을 curl로 다운받는 방법을 설명하겠습니다.
 
 > [공식사이트](https://nodejs.org){:target="\_blank"}_에서 node.js 최신버전을 확인할 수 있습니다._
 
@@ -117,16 +119,16 @@ sudo apt-get install nodejs npm
 
 <br />
 
-#### 4-2 이제 진짜 초기화 하자
+#### 4-2. (windows) npm 설치 후 초기화
 
 다시 로컬환경에서 Shell을 열어주시고 Chirpy폴더로 이동합니다.
 
 Shell 명령으로 `bash` 혹은 `wsl`을 입력하시면 Linux환경으로 로컬폴더를 열 수 있습니다.  
-`npm install`을 실행해주시고 `bash tools/init`명령을 실행하시면 초기화가 진행 됩니다.
+다시 `bash tools/init`명령을 실행하시면 초기화가 진행 됩니다.
 
 <br />
 
-여기서 저 같은 경우 초기화가 진행되지않으면서 두가지 문제를 경험하게 되었는데요.
+여기서 저 같은 경우 초기화가 진행되지않으면서 다양한 문제를 경험하게 되었는데요.
 
 - _error 1_ : tools/init: line : $'\r': command not found
 
@@ -135,22 +137,49 @@ Shell 명령으로 `bash` 혹은 `wsl`을 입력하시면 Linux환경으로 로�
   > 저는 /tools/init 파일을 에디터로 열어 LF로 바꿔서 해결했습니다.
   > <img width="70%" src="/assets/img/posts-img/240419/crlf_error.png" alt="crlf_error" />
   >
-  > 개행방식을 _LF_ 바꿨다면 `init` 파일을 `git add tools/init` 해주세요.  
-  > git add를 진행하지않으면 `init`파일 `line:45`에 의해서 파일이 staging 상태가 아니라는 Error 코드가 뜨게됩니다.  
+  > 개행방식을 _LF_ 바꿨다면 `init` 파일을 `git add --all` 해주세요.  
+  > git add를 진행하지않으면 `init`파일 `line:45`에 의해서 파일이 staging 상태가 아니라는 Error 코드가 뜨게됩니다.
+  >
   > `Error: Commit unstaged files first, and then run this tool again.`
 
-- _error 2_ : mv: cannot stat '.github/workflows/starter/pages-deploy.yml': No such file or directory
-  > `init` 파일 `line:93`  
-  > github action, workflow를 실행시킬 pages-deploy.yml파일이 없다는데요.  
-  > `npm install`명령을 실행하지않아서 Clone한 폴더에서 `npm install`을 실행해서 해결했습니다..
+<br />
 
-error를 해결 후 다시 `bash tools/init`을 실행하여 초기화를 진행했습니다.🥳🥳
+- _error 2_ : mv: cannot stat '.github/workflows/starter/pages-deploy.yml': No such file or directory
+
+  > `init` 파일 `line:93`
+  >
+  > github action, workflow를 실행시킬 pages-deploy.yml파일 또는 경로에 문제가 있다는대요.
+  >
+  > npm을 설치하지 않아 pages-deploy.yml파일을 못찾나 싶어서 로컬폴더에서 Linux환경으로 `npm install`을 실행해서 해결했습니다.
+
+<br />
+
+- _error 3_ : 초기화를 진행해도 /assets/js/dist 폴더에 `.js` 생성되지않은 문제 (NODE_ENV 환경 변수 에러)
+
+  > 최상위 폴더에 `rollup.config.js`와 `package.json`에 script섹션 build스크립트에서 확인이 가능합니다.  
+  > `"build": "NODE_ENV=production npx rollup -c --bundleConfigAsCjs",`
+  >
+  > \_javsciprt에 .js 파일을 dist에 .min.js로 번들링 해주는 `rollup.config.js`가 무슨 이유에서인지 run build로 실행되지않아서 생긴 문제로 보여집니다.
+  >
+  > `NODE_ENV=production`: 프로젝트를 배포환경으로 설정  
+  > `npx rollup -c`: Rollup으로 `rollup.config.js`을 실행
+  >
+  > 터미널에서 직접 `npm run build`하거나 저는 직접 build 스크립크를 터미널에서 실행해서 해결했습니다.
+  >
+  > ```terminal
+  > NODE_ENV=production npx rollup -c --bundleConfigAsCjs
+  > ```
+
+<img width="80%" src="/assets/img/posts-img/240419/reset_success.png" alt="reset_success">
+
+모든 error를 해결 후 다시 `bash tools/init`을 실행하여 초기화를 진행했습니다.🥳🥳
 
 <br />
 
 ## **로컬**에서 Jekyll 실행
 
-Github Pages에 업로드하기전 로컬서버에서 작업할 수 있는 환경을 jekyll로 구축합니다.
+Github Pages에 업로드하기전 로컬서버에서 작업할 수 있는 환경을 jekyll로 구축합니다.  
+`ruby`로 `bundle` 을 설치한 후 `jekyll serve` 서버를 실행 시킬 수 있습니다.
 
 <br />
 
@@ -185,7 +214,7 @@ gem install jekyll minima bundler jekyll-feed tzinfo-data
 
 ### 2. 의존성 모듈 설치하기
 
-Chirpy폴더로 돌아와 아래 명령을 실행하여 모듈을 설치합니다.
+로컬폴더로 돌아와 아래 명령을 실행하여 모듈을 설치합니다.
 
 ```shell
 bundle
@@ -197,7 +226,7 @@ bundle
 
 ### 3. Jekyll 실행하기
 
-모듈까지 설치해서 Chirpy폴더에 `Gemfile.lock`이 생성되었다면 아래 명령으로 로컬 서버를 실행합니다!
+의존성 모듈까지 설치해서 Chirpy폴더에 `Gemfile.lock`이 생성되었다면 아래 명령으로 로컬서버를 실행합니다!
 
 ```shell
 jekyll serve
@@ -222,17 +251,16 @@ jekyll serve
 ## GitHub Pages로 배포하기
 
 이제 마지막으로 Github Pages로 push하여 블로그를 배포하겠습니다.
-
 저는 초기화가 진행되면서 원격저장소와 로컬저장소의 차이때문에 push가 진행 되지않았습니다.
+여기서 GitHub 파일들을 Pull 또는 fetch 해버리면 다시 초기화를 진행해야합니다.
 
-여기서 GitHub 파일들을 Pull 또는 Patch 해버리면 다시 초기화를 진행해야하는 불상사가 일어날 수 있습니다.  
 ~~_저는 두번 했습니다...._~~
 
 <br />
 
 ### 1. 초기 설정 (\_config.yml)
 
-로컬폴더 최상단에 있는 `_config.yml`은 블로그 환경을 설정할 수 있습니다.  
+로컬 최상위 폴더에 있는 `_config.yml`은 블로그 환경을 설정할 수 있습니다.  
 해당 글에서는 배포하기전 기본 설정만 다루고 자세한 설정은 다음 글에서 다루겠습니다!
 
 - `lang` : `ko-KR`, 언어를 한글로 설정하고 기본값은 en `/_data/locales/ko-KR`
@@ -245,14 +273,14 @@ jekyll serve
 
 ### 2. 첫번째 포스팅 해보기
 
-블로그 글은 `/_posts`에 `.md`, `.markdown` 확장자 파일들로 구성됩니다.  
+블로그 게시물은 `/_posts`에 `.md`, `.markdown` 확장자 파일들로 구성됩니다.  
 글을 작성 요령은 아래와 같습니다.
 
 1. 파일명 : **YYYY-MM-DD-URL_NAME.md**
-1. 확장자는 `.md ` 또는 `.markdown`를 사용해야합니다. \_(짧은게 좋겠죠?)\_
-1. URL과 마찬가지로 파일명에 공백은 `-`로 대체해야합니다.
-1. 글은 꼭 `/_posts` 폴더에 작성해야합니다.
-1. front metter를 사용해 글의 레이아웃을 구성합니다.
+1. 확장자는 `.md ` 또는 `.markdown`를 사용해야합니다.
+1. 파일명에서 공백을 사용할 수 없습니다. `-`로 대체해야합니다.
+1. 게시물은 꼭 `/_posts` 폴더에 작성해야합니다.
+1. Front Metter를 사용해 글의 레이아웃을 구성합니다.
    [Front Metter 공식문서](https://chirpy.cotes.page/posts/write-a-new-post/#front-matter)
 
 ```markdown
@@ -280,6 +308,8 @@ tags: [blog, setting]
 <br />
 
 ### 3. Add Commit Push
+
+이제 수정한 파일들을 원격저장소에 commit하면 자동으로 배포까지 진행하게 됩니다.
 
 저같은 경우 원격저장소에 변경이력이 떠서 강제로 push하는 방법을 선택했습니다.
 
@@ -325,7 +355,7 @@ Github 저장소의 Actions탭에서 진행상황을 확인할 수 있습니다.
 <img width="70%" src="/assets/img/posts-img/240419/action_02.png" alt="action02" />
 
 commit이 workflow에서 오류가 없다면 초록불이 들어온 뒤 자동으로 배포하게되며,  
-`저장소 명 : [Github ID].github.io`을 주소창에 입력하면 Github Pages에 배포된 Chirpy UI를 확인하실 수 있습니다. 🥳🥳🥳
+`[Github ID].github.io`을 주소창에 입력하면 Github Pages에 배포된 Chirpy UI를 확인하실 수 있습니다. 🥳🥳🥳
 
 <br />
 
