@@ -5,8 +5,6 @@ categories: [Blog, GitHub Pages]
 tags: [blog, setting]
 ---
 
-> 게시물에 링크가 많습니다. **Ctrl + left click** / **&#8984; + click** 을 이용하시면 새 탭에서 열 수 있습니다.
-
 <br />
 
 ## 서론
@@ -22,6 +20,10 @@ tags: [blog, setting]
 > [(WSL) Windows에서 Ubuntu bash 사용하는 방법 - Ju-ing님의 블로그](https://blog.ju-ing.com/posts/WSL-ubuntu-bash-install/)
 
 <!-- > [[Windows] WSL2로 리눅스 설치 및 기본 사용법 - LainyZine님의 블로그](https://www.lainyzine.com/ko/article/how-to-install-wsl2-and-use-linux-on-windows-10/) -->
+
+<br />
+
+> 게시물에 링크가 많습니다. **Ctrl + left click** / **&#8984; + click** 을 이용하시면 새 탭에서 열 수 있습니다.
 
 <br />
 
