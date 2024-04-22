@@ -1,8 +1,8 @@
 ---
 title: Jekyll, Chirpy theme로 Github Pages 블로그 시작하기
 date: 2024-04-19 18:16:00 +0900
-categories: [Blog, GitHub Pages]
-tags: [blog, setting]
+categories: [Blog, Jekyll]
+tags: [blog, setting, jekyll, chirpy, github pages]
 ---
 
 <br />
