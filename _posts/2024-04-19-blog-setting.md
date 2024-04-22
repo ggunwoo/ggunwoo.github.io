@@ -152,7 +152,7 @@ Shell 명령으로 `bash` 혹은 `wsl`을 입력하시면 Linux환경으로 로�
   >
   > github action, workflow를 실행시킬 pages-deploy.yml파일 또는 경로에 문제가 있다는대요.
   >
-  > npm을 설치하지 않아 pages-deploy.yml파일을 못찾나 싶어서 로컬폴더에서 Linux환경으로 `npm install`을 실행해서 해결했습니다.
+  > 로컬폴더에서 Linux환경으로 `npm install`을 실행해서 해결했습니다.
 
 <br />
 
